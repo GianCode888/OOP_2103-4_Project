@@ -1,16 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("DOCTORS DIRECTORY");
-        System.out.println("----------------");
 
-        Doctor[] doctors = {
-            new Doctor("JC Nealega", "Resident Family Doctor, Internal Medicine, OB-GYNE Specialist"),
-            new Doctor("Kyle Gian Libera", "Internal Medicine, Endocrinology Specialist"),
-            new Doctor("Vincent Dipasupil", "Internal Medicine, Pulmonology Specialist")
-        };
+        Services generalService = new Services("---------------------------------------------SERVICES AVAILABLE---------------------------------------------");
+        generalService.info();
 
-        for (Doctor doctor : doctors) {
-            doctor.displayInfo();
-        }
+        Consult labService = new Consult("         Laboratory Tests      |","Jan Nole Matres     |","Medical Technologist");
+        labService.info();
+
+        Consult sexEdService = new Consult("   Sexual Health and Wellbeing |","JC Nealega          |","Health Education Specialist");
+        sexEdService.info();
+
+        Consult counsellingService = new Consult("          Counselling          |","Kyle Gian Libera    |","Psychologist");
+        counsellingService.info();
+
+        Consult healthyLungsService = new Consult("Healthy Lungs, Healthy Living  |","Vincent Dipasupil   |","Pulmonologist");
+        healthyLungsService.info();
     }
 }
