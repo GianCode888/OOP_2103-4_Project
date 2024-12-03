@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Login {
-    // Hardcoded patient data
+
     static final String PATIENT_USERNAME = "Niel";
     static final String PATIENT_PASSWORD = "lala1234";
     static final String PATIENT_INFO = """
@@ -15,7 +15,6 @@ public class Login {
             Email: nielajcapili@gmail.com
             """;
 
-    // Hardcoded doctor and staff data
     static final String DOCTOR_STAFF_PASSWORD = "lala1234";
     static final HashMap<String, String> DOCTORS_AND_STAFF = new HashMap<>();
 
@@ -35,7 +34,7 @@ public class Login {
         System.out.println("Welcome to the Hospital Patient Management System");
         System.out.println("Are you a (1) Patient or (2) Doctor/Staff?");
         int userType = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         switch (userType) {
             case 1 -> patientLogin(scanner);
